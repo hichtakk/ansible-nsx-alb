@@ -1,0 +1,39 @@
+- hosts: localhost
+  connection: local
+  collections:
+    - vmware.alb
+  tasks:
+    - name: Example to create SystemConfiguration object
+      avi_systemconfiguration:
+        avi_credentials: "{{ avi_credentials }}"
+        global_tenant_config:
+          se_in_provider_context: true
+          tenant_access_to_provider_se: true
+          tenant_vrf: false
+        dns_configuration:
+          search_domain: '{{ dns.search_domain }}'
+          server_list:
+            - type: V4
+              addr: '{{ dns.server01 }}'
+            - type: V4
+              addr: '{{ dns.server02 }}'
+        portal_configuration:
+          use_uuid_from_input: false
+          redirect_to_https: true
+          disable_remote_cli_shell: false
+          enable_clickjacking_protection: true
+          enable_http: true
+          enable_https: true
+          password_strength_check: true
+          allow_basic_authentication: false
+          disable_swagger: false
+        ntp_configuration:
+          ntp_servers:
+            - server:
+                type: DNS
+                addr: "{{ ntp.server01 }}"
+            - server:
+                type: DNS
+                addr: "{{ ntp.server02 }}"
+        default_license_tier: "{{ license }}"
+        welcome_workflow_complete: true

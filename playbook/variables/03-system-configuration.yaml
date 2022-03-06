@@ -1,0 +1,8 @@
+dns:
+  search_domain: tnz.vmw
+  server01: 192.168.111.240
+  server02: 192.168.111.237
+ntp:
+  server01: 192.168.111.240
+  server02: 192.168.111.237
+license: ENTERPRISE_18

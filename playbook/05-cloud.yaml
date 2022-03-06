@@ -1,0 +1,19 @@
+- hosts: localhost
+  connection: local
+  collections:
+    - vmware.alb
+  tasks:
+    - name: Generate SE OVA image
+      avi_api_session:
+        avi_credentials: "{{ avi_credentials }}"
+        http_method: post
+        path: 'fileservice/seova'
+        timeout: 600
+        data:
+          file_format: ova
+    - name: Create a cloud
+      avi_cloud:
+        avi_credentials: "{{ avi_credentials }}"
+        name: "{{ cloud_name }}"
+        vtype: "{{ cloud_type }}"
+        tenant_ref: /api/tenant?name=admin

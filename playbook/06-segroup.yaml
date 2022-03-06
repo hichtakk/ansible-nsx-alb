@@ -1,0 +1,12 @@
+- hosts: localhost
+  connection: local
+  collections:
+    - vmware.alb
+  tasks:
+    - name: Create ServiceEngineGroup
+      avi_serviceenginegroup:
+        avi_credentials: "{{ avi_credentials }}"
+        name: "{{ seg_name }}"
+        cloud_ref: "/api/cloud?name={{ cloud_name }}"
+        ha_mode: "HA_MODE_SHARED_PAIR"
+        min_scaleout_per_vs: 2

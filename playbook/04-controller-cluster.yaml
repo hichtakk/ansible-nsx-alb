@@ -1,0 +1,30 @@
+- hosts: localhost
+  connection: local
+  collections:
+    - vmware.alb
+  tasks:
+    - name: Example to create Cluster object
+      avi_cluster:
+        avi_credentials: "{{ avi_credentials }}"
+        username: "{{ avi_credentials.username }}"
+        password: "{{ avi_credentials.password }}"
+        name: cluster01
+        virtual_ip:
+          addr: "{{ cluster_ip }}"
+          type: "V4"
+        nodes:
+        - ip:
+            type: "V4"
+            addr: "{{ ctrl1_ip }}"
+          name: "{{ ctrl1_ip }}"
+          password: "{{ avi_credentials.password }}"
+        - ip:
+            type: "V4"
+            addr: "{{ ctrl2_ip }}"
+          name: "{{ ctrl2_ip }}"
+          password: "{{ avi_credentials.password }}"
+        - ip:
+            type: "V4"
+            addr: "{{ ctrl3_ip }}"
+          name: "{{ ctrl3_ip }}"
+          password: "{{ avi_credentials.password }}"

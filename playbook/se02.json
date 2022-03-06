@@ -1,0 +1,90 @@
+{
+  "DiskProvisioning": "thin",
+  "IPAllocationPolicy": "fixedPolicy",
+  "IPProtocol": "IPv4",
+  "PropertyMapping": [
+    {
+      "Key": "AVICNTRL",
+      "Value": "192.168.111.207"
+    },
+    {
+      "Key": "AVISETYPE",
+      "Value": "NETWORK_ADMIN"
+    },
+    {
+      "Key": "AVICNTRL_AUTHTOKEN",
+      "Value": ""
+    },
+    {
+      "Key": "AVICNTRL_CLUSTERUUID",
+      "Value": ""
+    },
+    {
+      "Key": "avi.mgmt-ip.SE",
+      "Value": "192.168.111.205"
+    },
+    {
+      "Key": "avi.mgmt-mask.SE",
+      "Value": "255.255.255.0"
+    },
+    {
+      "Key": "avi.default-gw.SE",
+      "Value": "192.168.111.240"
+    },
+    {
+      "Key": "avi.DNS.SE",
+      "Value": "192.168.111.240"
+    },
+    {
+      "Key": "avi.sysadmin-public-key.SE",
+      "Value": ""
+    }
+  ],
+  "NetworkMapping": [
+    {
+      "Name": "Management",
+      "Network": ""
+    },
+    {
+      "Name": "Data Network 1",
+      "Network": ""
+    },
+    {
+      "Name": "Data Network 2",
+      "Network": ""
+    },
+    {
+      "Name": "Data Network 3",
+      "Network": ""
+    },
+    {
+      "Name": "Data Network 4",
+      "Network": ""
+    },
+    {
+      "Name": "Data Network 5",
+      "Network": ""
+    },
+    {
+      "Name": "Data Network 6",
+      "Network": ""
+    },
+    {
+      "Name": "Data Network 7",
+      "Network": ""
+    },
+    {
+      "Name": "Data Network 8",
+      "Network": ""
+    },
+    {
+      "Name": "Data Network 9",
+      "Network": ""
+    }
+  ],
+  "MarkAsTemplate": false,
+  "PowerOn": true,
+  "InjectOvfEnv": false,
+  "WaitForIP": false,
+  "Name": "TMP-SE02"
+}

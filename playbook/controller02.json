@@ -1,0 +1,55 @@
+{
+  "DiskProvisioning": "flat",
+  "IPAllocationPolicy": "fixedPolicy",
+  "IPProtocol": "IPv4",
+  "PropertyMapping": [
+    {
+      "Key": "avi.mgmt-ip.CONTROLLER",
+      "Value": "192.168.111.209"
+    },
+    {
+      "Key": "avi.mgmt-mask.CONTROLLER",
+      "Value": "255.255.255.0"
+    },
+    {
+      "Key": "avi.default-gw.CONTROLLER",
+      "Value": "192.168.111.240"
+    },
+    {
+      "Key": "avi.sysadmin-public-key.CONTROLLER",
+      "Value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC23ogttG0V5/cbfvCqwgDWClUDPK3h1+h9IgdA3YU2yr4xnWsG1GUzpQp0Ywpdee+EqSdcd6dzp+8rzKimaoCYtFwZUiSmylWqtIlwVTEN+SuvZ91x+NZWL2/oJ7BlaxnxoTwSRA5yWy8KkbgxZTW+rZSva1Gv0SC9NcAe0SOayI2o1cBdPYCpJbOqWj3zykTt57e9hPMquMzLy/p+8ZTRYz01VKKUtSGvdPBPNmgXda9f1ifBqbNeiTxhe1tXLwnjkJ4BR5Rplcufx01Ur5yWMlga4aRnYDrYWI9/wPmesUWu0cnZAjhTC+cNOJMFiBoY3RA+X9+01RRH5erHTI2Z"
+    },
+    {
+      "Key": "avi.nsx-t-node-id.CONTROLLER",
+      "Value": ""
+    },
+    {
+      "Key": "avi.nsx-t-ip.CONTROLLER",
+      "Value": ""
+    },
+    {
+      "Key": "avi.nsx-t-auth-token.CONTROLLER",
+      "Value": ""
+    },
+    {
+      "Key": "avi.nsx-t-thumbprint.CONTROLLER",
+      "Value": ""
+    },
+    {
+      "Key": "avi.hostname.CONTROLLER",
+      "Value": "tmp-alb02.tmp.local"
+    }
+  ],
+  "NetworkMapping": [
+    {
+      "Name": "Management",
+      "Network": "PVLAN-3111"
+    }
+  ],
+  "MarkAsTemplate": false,
+  "PowerOn": true,
+  "InjectOvfEnv": false,
+  "WaitForIP": false,
+  "Name": "TMP-ALB02"
+}
+
